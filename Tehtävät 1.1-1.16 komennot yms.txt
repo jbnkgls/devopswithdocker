@@ -1,0 +1,107 @@
+1.1
+
+docker container ls -a
+	
+
+
+1.2
+
+docker container ls -a
+
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+docker image ls
+
+
+
+
+
+1.3
+
+docker container run -it devopsdockeruh/pull_exercise
+
+basics
+
+
+
+1.4
+
+docker container run -d --rm -it --name bash_ex devopsdockeruh/exec_bash_exercise
+
+docker container exec -it bash_ex bash
+
+tail -f ./logs.txt
+
+"Docker is easy"
+
+
+1.5
+
+docker container run -d -it --name ubuntu ubuntu:16.04 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+docker container exec -it ubuntu bash
+
+apt update
+
+apt install curl
+
+curl helsinki.fi
+
+1.6
+
+docker build -t docker-clock .
+
+docker run docker-clock
+
+1.7
+
+docker build -t curler .
+
+docker container run -it curler
+
+1.8
+
+docker container run -v "$(pwd)/logs.txt:/usr/app/logs.txt" devopsdockeruh/first_volume_exercise 
+
+1.9
+
+docker container run -d -p 80 devopsdockeruh/ports_exercise
+
+docker container port 5dbf
+
+
+1.12 
+
+docker build -t frontend-ex .
+
+docker container run -d -p 5000:5000 frontend-ex
+
+docker build -t backend-ex .        
+
+docker container run -d -p 8000:8000 backend-ex
+
+
+1.13
+
+docker build -t java-projekti .
+
+docker container run -it -p 8080:8080 java-projekti 
+
+
+
+
+1.14
+
+docker build -t ruby-projekti .
+
+docker container run -it -p 3000:3000 ruby-projekti rails s
+
+
+1.15
+
+https://hub.docker.com/repository/docker/jbnkglsd/rubyrails_tehtava_1.15
+
+
+1.16
+
+https://heroku-example-j.herokuapp.com
