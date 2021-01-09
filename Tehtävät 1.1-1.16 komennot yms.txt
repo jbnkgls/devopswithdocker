@@ -69,6 +69,10 @@ docker container run -d -p 80 devopsdockeruh/ports_exercise
 
 docker container port 5dbf
 
+1.11
+
+docker container run -d -p 8000:8000 backend-ex
+
 
 1.12 
 
